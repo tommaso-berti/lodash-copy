@@ -1,17 +1,17 @@
 const _ = {};
-//to test this instruction, run the command: node _.js
+//to test this instruction, run the command: node test/lodash.js
 
 _.clamp = (num, lower, upper) => {
     num = Math.min(Math.max(num, lower), upper)
     return num
 }
-//to test this instruction, run the command: node clamp.js
+//to test this instruction, run the command: node test/clamp.js
 
-_.inRange = (num, start, end) => {
-
+_.inRange = (num, start = 0, end) => {
+    return (num >= start) && (num < end)
 }
 
-
+console.log(_.inRange(5, 10)) // true
 
 
 
