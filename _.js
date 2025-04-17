@@ -16,10 +16,44 @@ _.inRange = (num, start, end) => {
     return (num >= start) && (num < end)
 }
 
-_.words = (str) => {}
+_.words = (str) => {
+    return str.split(' ');
+}
 
-console.log(_.inRange(5, 10)) // true
+_.pad = (string, length) => {
+    if(string.length < length) {
+        let diff = (length - string.length)
+        let padStart = Math.floor(diff/2);
+        let padEnd = padStart + diff%2;
+        return (string.padEnd(padEnd + string.length)).padStart(padStart + string.length + padEnd);
+    }
+    else return string;
+}
 
+_.has = (object, key) => {
+    return object[key] !== undefined;
+}
+
+_.invert = (object) => {
+    let keyValueArr = Object.entries(object)
+    let valueKeyArr= [];
+     keyValueArr.forEach(([key, value]) => {
+        return valueKeyArr.push([value, key])
+    })
+    return Object.fromEntries(valueKeyArr)
+}
+
+_.findKey = (object, predicate) => {
+    for (const key in object) {
+        const value = object[key];
+        const predicateReturnValue = predicate(value);
+        if(predicateReturnValue)
+            return key;
+    }
+    return undefined;
+}
+
+console.log(_.findKey({pippo: 2}, (value) => value === 2))
 
 
 
