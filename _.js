@@ -7,11 +7,18 @@ _.clamp = (num, lower, upper) => {
 }
 //to test this instruction, run the command: node test/clamp.js
 
-_.inRange = (num, start = 0, end) => {
+_.inRange = (num, start, end) => {
+    if(!end) {
+        end = start;
+        start = 0;
+    }
+    if (start > end) [start, end] = [end, start]
     return (num >= start) && (num < end)
 }
 
-console.log(_.inRange(5, 10)) // true
+_.words = (str) => {}
+
+console.log(_.inRange(5, 10, 6)) // true
 
 
 
