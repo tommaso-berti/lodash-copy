@@ -76,8 +76,5 @@ _.chunk = (array, size = 1) => {
     return resArray;
 }
 
-console.log(_.chunk([1, 2, 3, 4, 5], 2))
-
-
 // Do not write or modify code below this line.
 module.exports = _;
