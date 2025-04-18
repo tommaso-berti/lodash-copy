@@ -53,10 +53,15 @@ _.findKey = (object, predicate) => {
     return undefined;
 }
 
-console.log(_.findKey({pippo: 2}, (value) => value === 2))
+_.drop = (array, num) => {
+    num = num ?? 1;
+    return array.slice(num);
+}
 
-
-
+_.dropWhile = (array, predicate) => {
+    let dropNumber = array.findIndex((element, index) => !predicate(element, index, array));
+    return _.drop(array, dropNumber);
+}
 
 
 
