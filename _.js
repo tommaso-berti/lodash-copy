@@ -68,9 +68,9 @@ _.chunk = (array, size = 1) => {
     let initialSize = 0;
     let finalSize = size;
     while(initialSize < array.length) {
-        let sliced = array.slice(initialSize, size);
+        let sliced = array.slice(initialSize, finalSize);
         initialSize += size;
-        size += 2;
+        finalSize += size;
         resArray.push(sliced);
     }
     return resArray;
