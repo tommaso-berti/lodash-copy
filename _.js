@@ -63,6 +63,20 @@ _.dropWhile = (array, predicate) => {
     return _.drop(array, dropNumber);
 }
 
+_.chunk = (array, size = 1) => {
+    let resArray = [];
+    let initialSize = 0;
+    let finalSize = size;
+    while(initialSize < array.length) {
+        let sliced = array.slice(initialSize, size);
+        initialSize += size;
+        size += 2;
+        resArray.push(sliced);
+    }
+    return resArray;
+}
+
+console.log(_.chunk([1, 2, 3, 4, 5], 2))
 
 
 // Do not write or modify code below this line.
