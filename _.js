@@ -37,9 +37,10 @@ _.has = (object, key) => {
 _.invert = (object) => {
     let keyValueArr = Object.entries(object)
     let valueKeyArr= [];
-     keyValueArr.forEach(([key, value]) => {
+    keyValueArr.forEach(([key, value]) => {
         return valueKeyArr.push([value, key])
     })
+    // use "for (const [key, value] of keyValueArr) {}" for better performances
     return Object.fromEntries(valueKeyArr)
 }
 
