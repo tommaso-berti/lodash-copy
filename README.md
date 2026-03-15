@@ -1,16 +1,16 @@
 # lodash-copy
 
-Mini clone didattico di Lodash in JavaScript, con implementazione di utility di base e test manuali in Node.js.
+A small educational Lodash clone in JavaScript, with core utility implementations and manual tests in Node.js.
 
-## Obiettivo
-Questo progetto esercita:
-- manipolazione di array, stringhe e oggetti
-- uso di callback/predicate
-- scrittura di funzioni pure e modulari
-- verifica del comportamento tramite test
+## Goal
+This project practices:
+- array, string, and object manipulation
+- callback/predicate usage
+- writing pure and modular functions
+- behavior verification through tests
 
-## Funzioni implementate
-Nel file `_.js` sono presenti:
+## Implemented functions
+The `_.js` file includes:
 - `_.clamp(num, lower, upper)`
 - `_.inRange(num, start, end)`
 - `_.words(str)`
@@ -22,28 +22,28 @@ Nel file `_.js` sono presenti:
 - `_.dropWhile(array, predicate)`
 - `_.chunk(array, size)`
 
-## Struttura del progetto
-- `_.js`: implementazione delle utility
-- `test/`: suite di test per ogni funzione
-- `test/test-all.js`: runner per eseguire tutti i test
+## Project structure
+- `_.js`: utility implementations
+- `test/`: test suite for each function
+- `test/test-all.js`: runner to execute all tests
 
-## Come eseguire i test
-Prerequisito: Node.js installato.
+## How to run tests
+Prerequisite: Node.js installed.
 
-Esegui tutti i test:
+Run all tests:
 
 ```bash
 node test/test-all.js
 ```
 
-Esegui un test specifico (esempio):
+Run a specific test (example):
 
 ```bash
 node test/chunk.js
 ```
 
-## Stato attuale
-Tutti i test presenti in `test/test-all.js` risultano superati.
+## Current status
+All tests in `test/test-all.js` are currently passing.
 
-## Descrizione progetto/esercizio
-`lodash-copy` è un esercizio pratico di JavaScript che replica in modo semplificato alcune utility core di Lodash, implementando funzioni per la gestione di numeri, stringhe, array e oggetti (come `clamp`, `inRange`, `pad`, `drop`, `chunk`, `findKey` e `invert`) con approccio modulare e verificando il comportamento tramite una suite di test eseguibile da terminale con Node.js.
+## Project/exercise description
+`lodash-copy` is a practical JavaScript exercise that reproduces, in a simplified way, some core Lodash utilities by implementing functions for handling numbers, strings, arrays, and objects (such as `clamp`, `inRange`, `pad`, `drop`, `chunk`, `findKey`, and `invert`) with a modular approach and validating behavior through a test suite runnable from the terminal with Node.js.
